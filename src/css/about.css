@@ -1,0 +1,20 @@
+/*contact me*/
+
+.big-blue-bg{
+    background-color: #BFD2F8;
+    padding: 20px;
+}
+.big-blue-b{
+    background-color: #1F2B6C;
+    padding: 20px;
+}
+/*testmonial */
+.test-bg {
+    background-image: linear-gradient(to left, #1F2B6C, transparent), url('../images/test1.png');
+  background-size: cover;
+  
+  }
+  .abthero-bg{
+    background-image: url('../images/abt.png');
+    background-size: cover;
+  }
