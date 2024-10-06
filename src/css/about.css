@@ -3,10 +3,13 @@
 .big-blue-bg{
     background-color: #BFD2F8;
     padding: 20px;
+    width: 200px;
 }
 .big-blue-b{
     background-color: #1F2B6C;
     padding: 20px;
+    width: 200px;
+    
 }
 /*testmonial */
 .test-bg {
@@ -17,4 +20,29 @@
   .abthero-bg{
     background-image: url('../images/abt.png');
     background-size: cover;
+  }
+  /*contact*/
+  
+  .contact{
+    font-family: Yeseva One !important;
+
+    font-size: 18px;
+    font-weight: 2rem;
+    color: #1F2B6C;
+  }
+  .touch{
+    font-family:  work sans;
+    font-weight: bold;
+    font-size: 18;
+    line-height: auto;
+    color: #159EEC;
+    letter-spacing: 16%;
+  }
+
+  /*doctors*/
+  .btn-color{
+    background-color: #1F2B6C;
+  }
+  .card-color{
+    background-color: #159EEC;
   }
