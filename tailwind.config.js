@@ -14,6 +14,9 @@ export default {
       backgroundImage: {
         'custom-homepage-image': "url('/src/assets/homeassets/Physician_Trends_2021_Merritt_Hawkins 1.svg')"
       },
+      fontFamily: {
+        'yeseva': ['"Yeseva One"', 'cursive'], // Adding Yeseva One font
+      },
     },
   },
   plugins: [],
