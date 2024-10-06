@@ -9,6 +9,13 @@ export default {
       colors: {
         'primary': '#1F2B6C', //custom color for dark blue
         'secondary': '#159EEC', //custom color for light blue
+        'tertiary': '#BFD2F8', //custom color for button
+      },
+      backgroundImage: {
+        'custom-homepage-image': "url('/src/assets/homeassets/Physician_Trends_2021_Merritt_Hawkins 1.svg')"
+      },
+      fontFamily: {
+        'yeseva': ['"Yeseva One"', 'cursive'], // Adding Yeseva One font
       },
     },
   },
