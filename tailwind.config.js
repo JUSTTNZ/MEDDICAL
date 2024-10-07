@@ -7,6 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
+        'background': '#E5E4E8', //custom color for background
         'primary': '#1F2B6C', //custom color for dark blue
         'secondary': '#159EEC', //custom color for light blue
         'tertiary': '#BFD2F8', //custom color for button
