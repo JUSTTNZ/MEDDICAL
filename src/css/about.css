@@ -1,16 +1,4 @@
-/*contact me*/
 
-.big-blue-bg{
-    background-color: #BFD2F8;
-    padding: 20px;
-    width: 200px;
-}
-.big-blue-b{
-    background-color: #1F2B6C;
-    padding: 20px;
-    width: 200px;
-    
-}
 /*testmonial */
 .test-bg {
     background-image: linear-gradient(to left, #1F2B6C, transparent), url('../images/test1.png');
@@ -21,15 +9,7 @@
     background-image: url('../images/abt.png');
     background-size: cover;
   }
-  /*contact*/
   
-  .contact{
-    font-family: Yeseva One !important;
-
-    font-size: 18px;
-    font-weight: 2rem;
-    color: #1F2B6C;
-  }
   .touch{
     font-family:  work sans;
     font-weight: bold;

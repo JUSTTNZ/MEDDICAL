@@ -1,8 +1,16 @@
 import img from '../images/news.png'
 export const News = () => {
     return(
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-[100px]">
-  {/* Card */}
+      <div className='h-auto'>
+
+      
+      <div className="container mx-auto p-4 md:p-[100px] ">
+        <div className='text-center mb-4'>
+          <h5 className='care text-2xl'>Better information, Better health</h5>
+          <h5 className='text-2xl font-bold doc-heading'>News</h5>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
+  
   <div className="bg-white shadow-md rounded-lg overflow-hidden flex">
     <img src={img} alt="Article Image" className="w-1/3 object-cover" />
     <div className="p-4 w-2/3">
@@ -94,6 +102,7 @@ export const News = () => {
     </div>
   </div>
 </div>
-
+</div>
+</div>
     )
 }
