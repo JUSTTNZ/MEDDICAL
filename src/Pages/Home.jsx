@@ -177,15 +177,22 @@ const Home = () => {
     </div>
 </div>
 
-      <div className='bg-custom-appointment-image bg-no-repeat bg-cover'>
-        <div>
-          <h2>Book an Appointment</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-        <div>
-          <img src={appointment_form} alt="" />
-        </div>
-      </div>
+<div className="relative bg-custom-appointment-image bg-no-repeat bg-cover">
+  <div className="absolute inset-0 bg-white opacity-40"></div>
+  <div className="relative max-w-[1900px] mx-auto flex flex-col lg:flex-row p-4 min-h-[900px]">
+    <div className="flex-1 flex flex-col justify-center">
+      <h2 className="text-4xl text-secondary font-yeseva font-bold mb-4 ">Book an Appointment</h2>
+      <p className="text-gray-700 text-2xl font-yeseva">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </div>
+    <div className="flex-1 flex ">
+      <img src={appointment_form} alt="Appointment Form" className="w-2/3 h-auto" />
+    </div>
+  </div>
+</div>
+
+
 
 
 
