@@ -7,7 +7,7 @@ import img2 from '../images/doc3.png'
 
 export const Doctors = () => {
     return(
-      <div className="h-auto">
+      <div className="h-auto w-[2000px]">
       <div className="container mx-auto p-4 md:p-[100px]">
         <div className='text-center mb-4'>
           <h5 className='care text-2xl'>Trusted Care</h5>
