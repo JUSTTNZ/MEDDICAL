@@ -6,7 +6,7 @@ export const Footer = () => {
     return(
         <div className="h-auto  footer-bg">
             <div className="container mx-auto  ">
- <div className="grid grid-cols-4  p-12 footer-left">
+ <div className="grid grid-cols-2 md:grid-cols-4 p-4 md:p-12 footer-left md:pl-[40px] md:ml-[30px] pl-5 ml-4">
     <div className="flex flex-col ">
         <h4 className='big-med'>Meddical</h4>
         <p className='footer-p mt-4'>Leading the Way in Medical
