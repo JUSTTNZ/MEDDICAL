@@ -12,7 +12,7 @@ import group186 from '../assets/homeassets/Group 186 (1).svg'
 import group187 from '../assets/homeassets/Group 187 (1).svg'
 import vector5 from '../assets/homeassets/Vector (5).svg'
 import vector4 from '../assets/homeassets/Vector (4).svg'
-
+import appointment_form from '../assets/homeassets/Appointment Form.svg'
 
 const Home = () => {
   return (
@@ -177,13 +177,13 @@ const Home = () => {
     </div>
 </div>
 
-      <div className='bg-custom-appointment-image'>
+      <div className='bg-custom-appointment-image bg-no-repeat bg-cover'>
         <div>
           <h2>Book an Appointment</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
         <div>
-          
+          <img src={appointment_form} alt="" />
         </div>
       </div>
 
