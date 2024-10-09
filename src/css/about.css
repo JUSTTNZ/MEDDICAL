@@ -44,5 +44,29 @@
     background-color: #1F2B6C;
   }
   .card-color{
-    background-color: #159EEC;
+    background-color: #BFD2F8;
   }
+  .fb{
+  color: #1F2B6C  !important;
+  }
+  .neuro{
+    font-family: work sans;
+  
+    
+  }
+  .doc{
+    font-family: work sans;
+    font-size: 16;
+    line-height: 140%;
+    letter-spacing: 0%;
+    
+  }
+  .doc-heading{
+    color: #1F2B6C;
+    font-family: work sans;
+  }
+  .care{
+    color: #159EEC;
+    font-family: work sans;
+  }
+  

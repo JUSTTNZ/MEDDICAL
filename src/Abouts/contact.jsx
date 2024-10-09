@@ -5,14 +5,14 @@ import img4 from '../images/time.png'
 import '../css/about.css'
 export const Contact = () => {
     return(
-      <div className="h-auto mt-5 mb-5">
+      <div className="h-auto mt-5 mb-5 p-[100px]">
   <div className="container mx-auto">
     <div className='text-center mb-4'>
       <h5 className='touch'>Get in touch</h5>
       <h5 className='contact'>Contact Us</h5>
     </div>
     <div className="grid grid-cols-2 lg:grid-cols-4 md:grid-cols-4 gap-4 p-4">
-      <div className="flex flex-col items-center w-full">
+      <div className="flex flex-col items-center  w-full">
         <div className="big-blue-bg rounded-lg">
           <div className='w-12 h-12  rounded-full flex justify-center items-center'>
             <img src={img} className='w-6 h-6' />
