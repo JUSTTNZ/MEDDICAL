@@ -7,6 +7,7 @@ import Contact  from './Pages/Contacts'
 import { About } from './Pages/About'
 import { Doctor } from './Pages/Doctor'
 import { Footer } from './Pages/Footer'
+import Appointment from './Pages/Appointment'
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path='/about' element={<About />}   />
           <Route path='/doctors' element={<Doctor />} />
           <Route path='/contacts' element={<Contact/>}/>
+          <Route path='/appointments' element={<Appointment/>}/>
         </Routes>
       
         
