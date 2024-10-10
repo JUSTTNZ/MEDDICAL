@@ -8,6 +8,7 @@ import { About } from './Pages/About'
 import { Doctor } from './Pages/Doctor'
 import { Service } from './Pages/Services'
 import { Footer } from './Pages/Footer'
+import { Checkupservice } from './Pages/checkup'
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path='/about' element={<About />}   />
           <Route path='/doctors' element={<Doctor />} />
           <Route path='/service' element={<Service />} />
+          <Route path='/checkup' element={<Checkupservice />} />
           <Route path='/contacts' element={<Contact/>}/>
         </Routes>
       
