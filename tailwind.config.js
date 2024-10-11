@@ -14,7 +14,7 @@ export default {
       },
       backgroundImage: {
         'custom-homepage-image': "url('/src/assets/homeassets/Physician_Trends_2021_Merritt_Hawkins 1.svg')",
-        'custom-appointment-image': "url('/src/assets/homeassets/Rectangle 33.svg')",
+        'custom-appointments-image': "url('/src/assets/homeassets/Rectangle 33.svg')",
         'custom-appointment-image' : "url('/src/assets/appointments/Rectangle 3 (1).svg')"
       },
       fontFamily: {
