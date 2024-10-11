@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import hamburger from "../../assets/homeassets/Vector (9).svg";
 import search from '../../assets/homeassets/search.svg';
-
+import closeIcon from '../../assets/homeassets/Vector.svg'
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -36,7 +36,7 @@ const Navbar = () => {
             <img src={search} alt="Search" className="w-8 h-8" />
             {/* Hamburger icon */}
             <button onClick={toggleMenu}>
-              <img src={hamburger} alt="Menu" className="w-8 h-8" />
+            <img src={isMenuOpen ? closeIcon : hamburger} alt="Menu" className="w-8 h-8" />
             </button>
           </div>
         </div>
