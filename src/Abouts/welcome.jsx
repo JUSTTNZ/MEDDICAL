@@ -22,7 +22,7 @@ export const Welcome = () => {
   </li>
   <li className="flex items-center mb-2">
     <span className="bg-blue-500 rounded-full w-4 h-4 mr-2"></span>
-    <span>A Passion for Healing</span>
+    <span>A Legacy of Excellence</span>
   </li>
   <li className="flex items-center mb-2">
     <span className="bg-blue-500 rounded-full w-4 h-4 mr-2"></span>
