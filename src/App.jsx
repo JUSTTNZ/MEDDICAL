@@ -11,6 +11,7 @@ import { Footer } from './Pages/Footer'
 import { Checkupservice } from './Pages/checkup'
 import Appointment from './Pages/Appointment'
 import { News } from './Pages/News'
+import { SingleNews } from './Pages/singlenews'
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
           <Route path='/contacts' element={<Contact/>}/>
           <Route path='/appointments' element={<Appointment/>}/>
           <Route path='/blog' element={<News />}/>
+          <Route path='/singleblog' element={<SingleNews />}/>
         </Routes>
       
         
