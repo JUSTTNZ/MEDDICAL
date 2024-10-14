@@ -8,7 +8,10 @@ import { About } from './Pages/About'
 import { Doctor } from './Pages/Doctor'
 import { Service } from './Pages/Services'
 import { Footer } from './Pages/Footer'
+import { Checkupservice } from './Pages/checkup'
 import Appointment from './Pages/Appointment'
+import { News } from './Pages/News'
+import { SingleNews } from './Pages/singlenews'
 
 
 function App() {
@@ -23,8 +26,11 @@ function App() {
           <Route path='/about' element={<About />}   />
           <Route path='/doctors' element={<Doctor />} />
           <Route path='/service' element={<Service />} />
+          <Route path='/checkup' element={<Checkupservice />} />
           <Route path='/contacts' element={<Contact/>}/>
           <Route path='/appointments' element={<Appointment/>}/>
+          <Route path='/blog' element={<News />}/>
+          <Route path='/singleblog' element={<SingleNews />}/>
         </Routes>
       
         
