@@ -13,14 +13,14 @@
 }
 .footer-p{
     font-family: Work sans;
-    font-size: 18;
+    font-size: 20px;
     line-height: 140%;
     letter-spacing: 0%;
     color: #FCFEFE ;
 }
 .footer-links{
     font-family: Work sans;
-    font-size: 16;
+    font-size: 20px;
     line-height: 140%;
     font-weight: 400;
     letter-spacing: 0%;
@@ -55,5 +55,5 @@
     color: #FCFEFE;
     font-family: work sans;
     line-height: auto;
-    font-size: 16;
+    font-size: 16px;
 }

@@ -6,15 +6,15 @@ export const Footer = () => {
     return(
         <div className="h-auto  footer-bg">
             <div className="container mx-auto  ">
- <div className="grid grid-cols-2 md:grid-cols-4 p-4 md:p-12 footer-left md:pl-[40px] md:ml-[30px] pl-5 ml-4">
+ <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 p-4 md:p-12 footer-left lg:pl-[40px] lg:ml-[30px] pl-5 ">
     <div className="flex flex-col ">
         <h4 className='big-med'>Meddical</h4>
         <p className='footer-p mt-4'>Leading the Way in Medical
         Execellence, Trusted Care.</p>
     </div>
-    <div className="flex flex-col ">
-        <h5 className='footer-h'>Important Links</h5>
-        <ul className='mt-4'>
+    <div className="flex flex-col md:pl-4 lg:pl-0 md:mt-3 lg:mt-0">
+        <h5 className='footer-h text-[1.5rem]'>Important Links</h5>
+        <ul className='mt-4 mb-4'>
           <li className='footer-links'>Appointment</li>
           <li className='footer-links'>Doctors</li>
           <li className='footer-links'>Services</li>
@@ -22,8 +22,8 @@ export const Footer = () => {
         </ul>
     </div>
     <div className="flex flex-col ">
-        <h5 className='footer-h'>Contact Us</h5>
-        <ul className='mt-4'>
+        <h5 className='footer-h text-[1.5rem]'>Contact Us</h5>
+        <ul className='mt-4 mb-4'>
           <li className='footer-links'>Call: (237) 681-812-255</li>
           <li className='footer-links'>Email: fildineesoe@gmail.com</li>
           <li className='footer-links'>Address: 0123 Some place</li>
@@ -31,7 +31,7 @@ export const Footer = () => {
         </ul>
     </div>
     <div className="flex flex-col ">
-        <h5 className='footer-h'>Newsletter</h5>
+        <h5 className='footer-h text-[1.5rem]'>Newsletter</h5>
         <div className="relative mt-4">
   <input type="text" id="first_name" className="bg-gray-50  input-color
   text-gray-900 text-sm rounded-lg
@@ -45,9 +45,9 @@ export const Footer = () => {
     </div>
  </div>
  <hr  className='line'/>
- <div className='flex justify-between p-12'>
+ <div className='flex justify-between p-5 lg:p-12'>
   <div>
-    <p className='reserved'>© 2021 Hospital’s name All Rights Reserved by PNTEC-LTD</p>
+    <p className='reserved'>© 2024 Meddical </p>
   </div>
   <div className='flex gap-2'>
     <div>
