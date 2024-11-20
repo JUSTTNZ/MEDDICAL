@@ -2,9 +2,9 @@ import img from '../images/welcome.png'
 export const Welcome = () => {
     return(
 <div className='h-auto'>
-<div className="container mx-auto p-4 md:p-[100px]">
+<div className="container mx-auto p-8 lg:p-[100px]">
   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-    <div className="h-auto md:h-[509px]">
+    <div className="h-auto lg:h-[509px]">
       <img src={img} className="w-full h-full  " />
     </div>
     <div>
