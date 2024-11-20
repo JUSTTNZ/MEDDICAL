@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import hamburger from "../../assets/homeassets/Vector (9).svg";
 import search from '../../assets/homeassets/search.svg';
