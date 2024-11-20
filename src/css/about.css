@@ -10,15 +10,7 @@
     background-size: cover;
   }
   
-  .touch{
-    font-family:  work sans;
-    font-weight: bold;
-    font-size: 18;
-    line-height: auto;
-    color: #159EEC;
-    letter-spacing: 16%;
-  }
-
+  
   /*doctors*/
   .btn-color{
     background-color: #1F2B6C;
