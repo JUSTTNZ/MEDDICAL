@@ -7,13 +7,13 @@ import img2 from '../images/doc3.png'
 
 export const Doctors = () => {
     return(
-      <div className="h-auto w-[2000px]">
-      <div className="container mx-auto p-4 ">
+      <div className="h-auto">
+      <div className="container mx-auto lg:p-[50px] p-4 ">
         <div className='text-center mb-4'>
           <h5 className='care text-2xl'>Trusted Care</h5>
           <h5 className='text-2xl font-bold doc-heading'>Our Doctors</h5>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 mt-10">
           <div className="flex flex-col w-full h-74 card-color rounded shadow-md">
             <img src={img2} className='w-full h-74 object-cover rounded-t' />
             <div className='px-4 py-2'>

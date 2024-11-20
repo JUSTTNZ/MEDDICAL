@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import hamburger from "../../assets/homeassets/Vector (9).svg";
 import search from '../../assets/homeassets/search.svg';
-import closeIcon from '../../assets/homeassets/Vector.svg'
+import closeIcon from '../../assets/homeassets/Vector.svg';
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -16,12 +18,12 @@ const Navbar = () => {
           {/* Full Menu for larger screens */}
           <div className="hidden lg:flex justify-around gap-20 pr-16 w-full">
             <ul className="flex space-x-10 text-lg gap-10 leading-loose">
-              <li>Home</li>
-              <li>About us</li>
-              <li>Services</li>
-              <li>Doctors</li>
-              <li>News</li>
-              <li>Contact</li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/about">About us</Link></li>
+              <li><Link to="/service">Services</Link></li>
+              <li><Link to="/doctors">Doctors</Link></li>
+              <li><Link to="/blog">News</Link></li>
+              <li><Link to="/contacts">Contact</Link></li>
             </ul>
 
             <div className="flex space-x-6">
@@ -36,7 +38,7 @@ const Navbar = () => {
             <img src={search} alt="Search" className="w-8 h-8" />
             {/* Hamburger icon */}
             <button onClick={toggleMenu}>
-            <img src={isMenuOpen ? closeIcon : hamburger} alt="Menu" className="w-8 h-8" />
+              <img src={isMenuOpen ? closeIcon : hamburger} alt="Menu" className="w-8 h-8" />
             </button>
           </div>
         </div>
@@ -45,12 +47,12 @@ const Navbar = () => {
         {isMenuOpen && (
           <div className="lg:hidden mt-4">
             <ul className="flex flex-col space-y-4 text-lg">
-              <li>Home</li>
-              <li>About us</li>
-              <li>Services</li>
-              <li>Doctors</li>
-              <li>News</li>
-              <li>Contact</li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/about">About us</Link></li>
+              <li><Link to="/service">Services</Link></li>
+              <li><Link to="/doctors">Doctors</Link></li>
+              <li><Link to="/blog">News</Link></li>
+              <li><Link to="/contacts">Contact</Link></li>
             </ul>
             <div className="flex mt-4 space-x-6">
               <p className="bg-tertiary py-2 px-4 rounded-full text-primary">Appointment</p>
