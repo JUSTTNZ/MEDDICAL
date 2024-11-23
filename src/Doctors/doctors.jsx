@@ -1,172 +1,91 @@
-import fb from '../images/fb1.png'
-import ig from '../images/ig1.png'
-import inl from '../images/in1.png'
-import img from '../images/doc1.png'
-import img1 from '../images/doc2.png'
-import img2 from '../images/doc3.png'
+import React, { useState, useEffect } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import fb from "../images/fb1.png";
+import ig from "../images/ig1.png";
+import inl from "../images/in1.png";
+import img from "../images/doc1.png";
+import img1 from "../images/doc2.png";
+import img2 from "../images/doc3.png";
+
+const doctors = [
+  { id: 1, name: "Doctor A", specialty: "Neurology", img: img },
+  { id: 2, name: "Doctor B", specialty: "Cardiology", img: img1 },
+  { id: 3, name: "Doctor C", specialty: "Pediatrics", img: img2 },
+  { id: 4, name: "Doctor D", specialty: "Orthopedics", img: img },
+  { id: 5, name: "Doctor E", specialty: "Dermatology", img: img1 },
+];
 
 export const Doctors = () => {
-    return(
-      <div className="h-auto">
-      <div className="container mx-auto p-4 md:p-[100px]">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
-          <div className="flex flex-col w-full h-74 card-color rounded shadow-md">
-            <img src={img2} className='w-full h-74 object-cover rounded-t' />
-            <div className='px-4 py-2'>
-              <h5 className='doc text-1xl text-center'>Doctor’s Name</h5>
-              <h6 className='text-2xl text-center neuro tracking-widest'>Neurology</h6>
-            </div>
-            <div className='flex justify-center items-center px-4 py-2'>
-              <div className='flex gap-2 items-center'>
-                <div>
-                  <img src={fb} className='fb' />
-                </div>
-                <div>
-                  <img src={ig} className='ig' />
-                </div>
-                <div>
-                  <img src={inl} className='in' />
-                </div>
-              </div>
-            </div>
-            <button className='w-full py-2 btn-color text-white font-bold rounded-b'>
-              View Profile
-            </button>
-          </div>
-          <div className="flex flex-col w-full h-74 card-color rounded shadow-md hidden md:block">
-            <img src={img} className='w-full h-74 object-cover rounded-t' />
-            <div className='px-4 py-2'>
-              <h5 className='doc text-1xl text-center'>Doctor’s Name</h5>
-              <h6 className='text-2xl text-center neuro tracking-widest'>Neurology</h6>
-            </div>
-            <div className='flex justify-center items-center px-4 py-2'>
-              <div className='flex gap-2 items-center'>
-                <div>
-                  <img src={fb} className='fb' />
-                </div>
-                <div>
-                  <img src={ig} className='ig' />
-                </div>
-                <div>
-                  <img src={inl} className='in' />
-                </div>
-              </div>
-            </div>
-            <button className='w-full py-2  btn-color text-white font-bold rounded-b'>
-              View Profile
-            </button>
-          </div>
-          <div className="flex flex-col w-full h-74 card-color rounded shadow-md hidden md:hidden lg:block">
-            <img src={img1} className='w-full h-74 object-cover rounded-t' />
-            <div className='px-4 py-2'>
-              <h5 className='doc text-1xl text-center'>Doctor’s Name</h5>
-              <h6 className='text-2xl text-center neuro tracking-widest'>Neurology</h6>
-            </div>
-            <div className='flex justify-center items-center px-4 py-2'>
-              <div className='flex gap-2 items-center'>
-                <div>
-                  <img src={fb} className='fb' />
-                </div>
-                <div>
-                  <img src={ig} className='ig' />
-                </div>
-                <div>
-                  <img src={inl} className='in' />
-                </div>
-              </div>
-            </div>
-            <button className='w-full py-2 btn-color text-white font-bold rounded-b'>
-              View Profile
-            </button>
-          </div>
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const slideCount = doctors.length;
 
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    beforeChange: (_, next) => setCurrentSlide(next),
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
 
-          <div className="flex flex-col w-full h-74 card-color rounded shadow-md hidden md:block mt-4">
-            <img src={img} className='w-full h-74 object-cover rounded-t' />
-            <div className='px-4 py-2'>
-              <h5 className='doc text-1xl text-center'>Doctor’s Name</h5>
-              <h6 className='text-2xl text-center neuro tracking-widest'>Neurology</h6>
-            </div>
-            <div className='flex justify-center items-center px-4 py-2'>
-              <div className='flex gap-2 items-center'>
-                <div>
-                  <img src={fb} className='fb' />
-                </div>
-                <div>
-                  <img src={ig} className='ig' />
-                </div>
-                <div>
-                  <img src={inl} className='in' />
-                </div>
-              </div>
-            </div>
-            <button className='w-full py-2  btn-color text-white font-bold rounded-b'>
-              View Profile
-            </button>
-          </div>
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slideCount);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [slideCount]);
 
-          <div className="flex flex-col w-full h-74 card-color rounded shadow-md hidden md:hidden lg:block mt-4">
-            <img src={img1} className='w-full h-74 object-cover rounded-t' />
-            <div className='px-4 py-2'>
-              <h5 className='doc text-1xl text-center'>Doctor’s Name</h5>
-              <h6 className='text-2xl text-center neuro tracking-widest'>Neurology</h6>
-            </div>
-            <div className='flex justify-center items-center px-4 py-2'>
-              <div className='flex gap-2 items-center'>
-                <div>
-                  <img src={fb} className='fb' />
-                </div>
-                <div>
-                  <img src={ig} className='ig' />
-                </div>
-                <div>
-                  <img src={inl} className='in' />
-                </div>
+  return (
+    <div className="bg-background p-10">
+      <div className="container mx-auto">
+        <h2 className="text-primary font-bold text-center text-3xl mb-6">
+          Meet Our Doctors
+        </h2>
+        <Slider {...settings}>
+          {doctors.map((doctor) => (
+            <div
+              key={doctor.id}
+              className="flex flex-col items-center bg-white rounded-lg shadow-lg p-4"
+            >
+              <img
+                src={doctor.img}
+                alt={doctor.name}
+                className="w-full h-50 object-cover rounded-lg"
+              />
+              <h3 className="text-primary text-lg font-semibold mt-4">
+                {doctor.name}
+              </h3>
+              <p className="text-secondary text-sm">{doctor.specialty}</p>
+              <div className="flex gap-2 mt-4">
+                <img src={fb} alt="Facebook" className="w-6 h-6" />
+                <img src={ig} alt="Instagram" className="w-6 h-6" />
+                <img src={inl} alt="LinkedIn" className="w-6 h-6" />
               </div>
+              <button className="mt-4 w-full py-2 bg-tertiary text-primary font-semibold rounded">
+                View Profile
+              </button>
             </div>
-            <button className='w-full py-2 btn-color text-white font-bold rounded-b'>
-              View Profile
-            </button>
-          </div>
-
-          <div className="flex flex-col w-full h-74 card-color rounded shadow-md hidden md:hidden lg:block mt-4">
-            <img src={img2} className='w-full h-74 object-cover rounded-t' />
-            <div className='px-4 py-2'>
-              <h5 className='doc text-1xl text-center'>Doctor’s Name</h5>
-              <h6 className='text-2xl text-center neuro tracking-widest'>Neurology</h6>
-            </div>
-            <div className='flex justify-center items-center px-4 py-2'>
-              <div className='flex gap-2 items-center'>
-                <div>
-                  <img src={fb} className='fb' />
-                </div>
-                <div>
-                  <img src={ig} className='ig' />
-                </div>
-                <div>
-                  <img src={inl} className='in' />
-                </div>
-              </div>
-            </div>
-            <button className='w-full py-2 btn-color text-white font-bold rounded-b'>
-              View Profile
-            </button>
-          </div>
-        </div>
-        <div className="flex justify-center mt-4">
-          <div className="flex gap-2">
-            <button className="w-2 h-2 rounded-full bg-gray-400" onClick={() => {
-              // toggle visibility of doctor 1
-            }}></button>
-            <button className="w-2 h-2 rounded-full bg-gray-400" onClick={() => {
-              // toggle visibility of doctor 2
-            }}></button>
-            <button className="w-2 h-2 rounded-full bg-gray-400" onClick={() => {
-              // toggle visibility of doctor 3
-            }}></button>
-          </div>
-        </div>
+          ))}
+        </Slider>
       </div>
     </div>
-    )
-}
+  );
+};

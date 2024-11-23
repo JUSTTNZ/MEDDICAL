@@ -17,6 +17,9 @@ export default {
         'custom-appointments-image': "url('/src/assets/homeassets/Rectangle 33.svg')",
         'custom-appointment-image' : "url('/src/assets/appointments/Rectangle 3 (1).svg')"
       },
+      backgroundPosition: {
+        'custom-right': 'center right 10%',
+      },
       fontFamily: {
         'yeseva': ['"Yeseva One"', 'cursive'], // Adding Yeseva One font
       },
