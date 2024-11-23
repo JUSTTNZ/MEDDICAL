@@ -1,21 +1,25 @@
-import React from 'react'
+import { useState} from 'react'
 import { News } from '../Abouts/news'
 import backgroundImage from '../assets/contactsassets/Rectangle 3.svg'
 import rectangle from '../assets/contactsassets/Group 184 (1).svg'
 import map from '../assets/contactsassets/Mapview.svg'
-import call from '../assets/contactsassets/Group 188 (1).svg'
-import location from '../assets/contactsassets/Group 178 (1).svg'
-import email from '../assets/contactsassets/Group 202.svg'
-import clock from '../assets/contactsassets/Group 177 (1).svg'
+import img from '../images/call.png'
+import img2 from '../images/location.png'
+import img3 from '../images/mail.png'
+import img4 from '../images/time.png'
 const Contacts = () => {
+  const [activeBg, setActiveBg] = useState(1);
+  const handleBg = (index) => {
+    setActiveBg((prevActiveBg) => (prevActiveBg === index ? 1 : index))
+  }
   return (
     <>
      <div>
-        <div className="relative h-[400px] bg-cover bg-center" style={{ backgroundImage: `url(${backgroundImage})` }}>
+        <div className="relative h-[400px] bg-cover w-full bg-center" style={{ backgroundImage: `url(${backgroundImage})` }}>
         <div className="absolute inset-0 bg-white opacity-40"></div>
         
         {/* Content goes here */}
-        <div className="relative z-10 p-4 flex flex-col justify-center  h-full pl-[450px]">
+        <div className="relative z-10 p-4 flex flex-col justify-center  h-full pl-8 md:pl-[450px]">
             <p className='text-primary font-yeseva text-lg'>Home / Contact</p>
             <h3 className="text-primary font-yeseva text-4xl">Our Contacts</h3>
         </div>
@@ -24,12 +28,12 @@ const Contacts = () => {
           <img src={rectangle} alt=""  className=' w-full'/>
         </div>
 
-        <div className="flex justify-center m-16">
-          <img src={map} alt="" className="w-[1500px] mx-auto" />
+        <div className="flex justify-center px-6 py-6 md:m-16">
+          <img src={map} alt="" className=" w-full my-0 md:w-[1500px] md:mx-auto " />
         </div>
 
 
-        <div className=" flex items-center justify-center bg-gray-100 p-6 mt-24 mb-24">
+        <div className=" flex items-center justify-center bg-gray-100 p-6 md:mt-24 mb-24">
   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[1500px] w-full mx-auto">
 
     {/* Left Column - Text and Form */}
@@ -60,40 +64,56 @@ const Contacts = () => {
     </div>
 
     {/* Right Column - Contact Details */}
-    <div className="grid grid-cols-2 gap-4">
-      
-      {/* Emergency Contact */}
-      <div className="bg-tertiary pl-4 pt-10 pb-8 rounded-lg text-center flex flex-col items-start">
-        <img src={call} alt="" className="pb-2" />
-        <h4 className="font-semibold">EMERGENCY</h4>
-        <p className="mb-2">(237) 681-812-255</p>
-        <p className="mb-4">(237) 666-331-894</p>
-      </div>
-
-      {/* Location Details */}
-      <div className="bg-primary pl-4 pt-10 pb-8 text-tertiary rounded-lg text-center flex flex-col items-start">
-        <img src={location} alt="" className="pb-2" />
-        <h4 className="font-semibold">LOCATION</h4>
-        <p className="mb-2">0123 Some place</p>
-        <p className="mb-4">9876 Some country</p>
-      </div>
-
-      {/* Email Details */}
-      <div className="bg-tertiary pl-4 pt-10 pb-8 rounded-lg text-center flex flex-col items-start">
-        <img src={email} alt="" className="pb-2" />
-        <h4 className="font-semibold">EMAIL</h4>
-        <p className="mb-2">filidineeose@gmail.com</p>
-        <p className="mb-4">myebstudios@gmail.com</p>
-      </div>
-
-      {/* Working Hours */}
-      <div className="bg-tertiary pl-4 pt-10 pb-8 rounded-lg text-center flex flex-col items-start">
-        <img src={clock} alt="" className="pb-2" />
-        <h4 className="font-semibold">WORKING HOURS</h4>
-        <p className="mb-2">Mon-Sat 09:00-20:00</p>
-        <p className="mb-4">Sunday Emergency only</p>
-      </div>
-    </div>
+    <div className="grid grid-cols-1 sm:grid-cols-2  md:grid-cols-2 lg:grid-cols-2 gap-4 mx-4 mt-16">
+          <div 
+            onClick={() => handleBg(1)}
+           className={`flex flex-col items-center w-full px-0 flex-wrap `}>
+            <div className={`${activeBg === 1 ? 'bg-[#1F2B6C]' : 'bg-[#BFD2F8]'} transition-all duration-500 ease-in-out p-[20px] w-full lg:w-[200px] rounded-lg`}>
+              <div className="lg:w-12 lg:h-12 lg:justify-center lg:items-center w-full rounded-full flex md:justify-center md:items-center transition-colors duration-300 ">
+                <img src={img} className={`w-6 h-6 ${activeBg === 1 ? 'filter brightness-0 invert' : 'filter invert-[25%] sepia-[80%] saturate-[500%] hue-rotate-[180deg]'}`}/>
+              </div>
+              <h1 className={`${activeBg === 1 ? 'text-white' : '' }  lg:text-lg  font-bold mt-2`}>Emergency</h1>
+              <p className={`${activeBg === 1 ? 'text-white' : '' } mt-1`}>(237) 681-812-255</p>
+              <p className={`${activeBg === 1 ? 'text-white' : '' } mt-1`}>(237) 666-331-894</p>
+            </div>
+          </div>
+          <div 
+            onClick={() => handleBg(2)}
+           className={`flex flex-col items-center w-full px-0 flex-wrap `}>
+            <div className={`${activeBg === 2 ? 'bg-[#1F2B6C]' : 'bg-[#BFD2F8]'} transition-all duration-500 ease-in-out p-[20px] w-full lg:w-[200px] rounded-lg`}>
+              <div className="lg:w-12 lg:h-12 lg:justify-center lg:items-center w-full rounded-full flex md:justify-center md:items-center transition-colors duration-500 ">
+                <img src={img2} className={`w-6 h-6 ${activeBg === 2 ? 'filter brightness-0 invert' : 'filter invert-[25%] sepia-[80%] saturate-[500%] hue-rotate-[180deg]'}`}/>
+              </div>
+              <h1 className={`${activeBg === 2 ? 'text-white' : '' }  lg:text-lg  font-bold mt-2`}>Emergency</h1>
+              <p className={`${activeBg === 2 ? 'text-white' : '' } mt-1`}>(237) 681-812-255</p>
+              <p className={`${activeBg === 2 ? 'text-white' : '' } mt-1`}>(237) 666-331-894</p>
+            </div>
+          </div>
+          <div 
+            onClick={() => handleBg(3)}
+           className={`flex flex-col items-center w-full px-0 flex-wrap `}>
+            <div className={`${activeBg === 3 ? 'bg-[#1F2B6C]' : 'bg-[#BFD2F8]'} transition-all duration-500 ease-in-out p-[20px] w-full lg:w-[200px] rounded-lg`}>
+              <div className="lg:w-12 lg:h-12 lg:justify-center lg:items-center w-full rounded-full flex md:justify-center md:items-center transition-colors duration-300 ">
+                <img src={img3} className={`w-6 h-6 ${activeBg === 3 ? 'filter brightness-0 invert' : 'filter invert-[25%] sepia-[80%] saturate-[500%] hue-rotate-[180deg]'}`}/>
+              </div>
+              <h1 className={`${activeBg === 3 ? 'text-white' : '' }  lg:text-lg  font-bold mt-2`}>Emergency</h1>
+              <p className={`${activeBg === 3 ? 'text-white' : '' } mt-1`}>(237) 681-812-255</p>
+              <p className={`${activeBg === 3 ? 'text-white' : '' } mt-1`}>(237) 666-331-894</p>
+            </div>
+          </div>
+          <div 
+            onClick={() => handleBg(4)}
+           className={`flex flex-col items-center w-full px-0 flex-wrap `}>
+            <div className={`${activeBg === 4 ? 'bg-[#1F2B6C]' : 'bg-[#BFD2F8]'} transition-all duration-500 ease-in-out p-[20px] w-full lg:w-[200px] rounded-lg`}>
+              <div className="lg:w-12 lg:h-12 lg:justify-center lg:items-center w-full rounded-full flex md:justify-center md:items-center transition-colors duration-300 ">
+                <img src={img4} className={`w-6 h-6 ${activeBg === 4 ? 'filter brightness-0 invert' : 'filter invert-[25%] sepia-[80%] saturate-[500%] hue-rotate-[180deg]'}`}/>
+              </div>
+              <h1 className={`${activeBg === 4 ? 'text-white' : '' }  lg:text-lg  font-bold mt-2`}>Emergency</h1>
+              <p className={`${activeBg === 4 ? 'text-white' : '' } mt-1`}>(237) 681-812-255</p>
+              <p className={`${activeBg === 4 ? 'text-white' : '' } mt-1`}>(237) 666-331-894</p>
+            </div>
+          </div>
+        </div>
   </div>
 </div>
 

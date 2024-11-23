@@ -14,8 +14,8 @@ export const Blog = () => {
    <div className="col-span-2 space-y-8">
    
    <Blogpost />
-<Blogpost2 />
-<Blogpost3 />
+    <Blogpost2 />
+    <Blogpost3 />
 
 <nav className="flex justify-between">
   <div

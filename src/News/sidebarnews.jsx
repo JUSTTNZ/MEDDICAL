@@ -85,12 +85,12 @@ but not too long.</span>
 
 
       <div className="border-[#BFD2F8] border-2 shadow-lg rounded-lg p-6">
-        <h3 className="text-3xl font-bold mb-4 text-[#1F2B6C] font-yeseva tracking-widest   mb-4">Categories</h3>
-        <ul className="list-inside text-gray-700 ">
-  <li className='mb-3'>Health & Wellness <span className="bg-[#159EEC] rounded-full w-6 h-6 text-white text-xs flex justify-center item-center float-right ">3</span></li>
-  <li className='mb-3'>Medical Tips <span className="bg-[#159EEC] rounded-full w-6 h-6 text-white text-xs flex justify-center float-right">20</span></li>
-  <li className='mb-3'>Patient Stories <span className="bg-[#159EEC] rounded-full w-6 h-6 text-white text-xs flex justify-center float-right">20</span></li>
-  <li className=''>Updates & News <span className="bg-[#159EEC] rounded-full w-6 h-6 text-white text-xs flex justify-center float-right">30</span></li>
+        <h3 className="text-3xl font-bold mb-4 text-[#1F2B6C] font-yeseva tracking-widest">Categories</h3>
+        <ul className=" list-inside text-gray-700 ">
+  <li className='mb-3 flex justify-between items-center'>Health & Wellness <span className="bg-[#159EEC] rounded-full w-5 h-5 text-white text-xs flex justify-center item-center ">3</span></li>
+  <li className='mb-3 flex justify-between items-center'>Medical Tips <span className="bg-[#159EEC] rounded-full w-5 h-5 text-white text-xs flex justify-center item-center">20</span></li>
+  <li className='mb-3 flex justify-between items-center'>Patient Stories <span className="bg-[#159EEC] rounded-full w-5 h-5 text-white text-xs flex justify-center item-center">20</span></li>
+  <li className='mb-3 flex justify-between items-center'>Updates & News <span className="bg-[#159EEC] rounded-full w-5 h-5 text-white text-xs flex justify-center item-center">30</span></li>
 </ul>
       </div>
         </section>

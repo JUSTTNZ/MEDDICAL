@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Doctors } from '../Abouts/doctors'
+import { Doctors } from '../Doctors/doctors'
 import { News } from '../Abouts/news'
 import { Contact } from "../Abouts/contact"
 import hamburger from "../assets/homeassets/Vector (9).svg"
@@ -14,9 +14,9 @@ import vector4 from '../assets/homeassets/Vector (4).svg'
 import appointment_form from '../assets/homeassets/Appointment Form.svg'
 
 const Home = () => {
-  const [activeBg, setActiveBg] = useState(null);
+  const [activeBg, setActiveBg] = useState(1);
   const handleBg = (index) => {
-    setActiveBg((prevActiveBg) => (prevActiveBg === index ? null : index))
+    setActiveBg((prevActiveBg) => (prevActiveBg === index ? 1 : index))
   }
   return (
     <>
@@ -175,8 +175,8 @@ const Home = () => {
           <div className="absolute inset-0 bg-white opacity-40"></div>
           <div className="relative lg:max-w-[1900px] w-full mx-auto flex flex-col lg:flex-row p-4 sm:p-8 lg:min-h-[900px]">
             <div className="flex-1 flex flex-col justify-center transition-all duration-500 ease-in-out">
-              <h2 className="text-3xl sm:text-4xl text-secondary font-yeseva font-bold mb-4">Book an Appointment</h2>
-              <p className="text-gray-700  sm:text-xl font-yeseva">
+              <h2 className="text-3xl sm:text-4xl px-4 sm:px-0 text-secondary font-yeseva font-bold mb-4">Book an Appointment</h2>
+              <p className="text-gray-700 px-4 sm:px-0 sm:text-xl font-yeseva">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
               </p>
             </div>
