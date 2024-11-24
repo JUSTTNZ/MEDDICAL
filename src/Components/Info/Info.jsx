@@ -1,14 +1,18 @@
+/* eslint-disable react/display-name */
 import React from 'react';
+import PropTypes from 'prop-types';
 import logo from '../../assets/homeassets/Meddical.svg';
 import call from '../../assets/homeassets/call.svg';
 import clock from '../../assets/homeassets/clock.svg';
 import location from '../../assets/homeassets/location.svg';
 
-const Info = () => {
+const Info = React.forwardRef(({ infoVisible }, ref) => {
   return (
     <>
       {/*info components*/}
-      <div className="bg-white p-4 lg:p-8 flex flex-col lg:flex-row justify-around items-center text-lg">
+      <div
+      ref={ref}
+       className={`bg-white p-4 lg:p-8 flex flex-col lg:flex-row justify-around items-center text-lg transition-opacity duration-500 ease-in-out ${infoVisible ? 'opacity-100' : 'opacity-0'}`}>
         {/* Logo */}
         <img src={logo} alt="logo" className="h-6 lg:h-8  mb-4 lg:mb-0" />
 
@@ -46,6 +50,10 @@ const Info = () => {
       </div>
     </>
   );
+});
+
+Info.propTypes = {
+  infoVisible: PropTypes.bool.isRequired, // Ensure infoVisible is a boolean and required
 };
 
 export default Info;
